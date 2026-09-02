@@ -6,6 +6,8 @@ Automatische TV-/Projektor-Verriegelung für Home Assistant mit kompatiblen Deno
 
 Der Dual Display Manager steuert Heimkino-Setups, bei denen ein Fernseher und ein Projektor am selben AV-Receiver verwendet werden. Er sorgt automatisch dafür, dass der richtige Monitor-Ausgang des AV-Receivers aktiv ist und verhindert, dass TV und Projektor unbeabsichtigt gleichzeitig eingeschaltet bleiben.
 
+Als Ergänzung ist **Cinema Source Start – Denon / Marantz** vorgesehen. Dieser zweite, separat konfigurierte Blueprint startet AVR und TV, sobald ein ausgewählter Zuspieler aktiv wird. Beide kommerziellen Blueprint-Dateien werden ausschließlich über den vorgesehenen Verkaufsweg ausgeliefert und nicht in diesem öffentlichen Repository veröffentlicht.
+
 ## Features
 
 - Automatische Verriegelung zwischen TV und Projektor
@@ -75,6 +77,18 @@ Home Assistant verwendet direkt den Einschaltbefehl der ausgewählten TV-Integra
 
 Der AV-Receiver wechselt zurück auf den TV-Ausgang, der Fernseher wird jedoch nicht automatisch eingeschaltet.
 
+## Cinema Source Start
+
+**Cinema Source Start – Denon / Marantz** ergänzt die Display-Verriegelung um den Einschaltvorgang. Wird ein ausgewählter Zuspieler aktiv, kann der Blueprint:
+
+- den Denon-/Marantz-AV-Receiver einschalten;
+- den TV-Monitor-Ausgang des AVR setzen;
+- den TV über `media_player.turn_on` oder Wake-on-LAN starten;
+- einen bereits aktiven Projektor schützen;
+- Verzögerungen an die eigenen Geräte anpassen.
+
+Der Zuspieler muss dabei von einem inaktiven in einen aktiven Zustand wechseln. Die Auswahl der AV-Receiver-Eingangsquelle selbst bleibt der jeweils verwendeten HDMI-CEC- beziehungsweise Geräteintegration überlassen.
+
 ## Voraussetzungen
 
 - Home Assistant 2024.6 oder neuer
@@ -96,7 +110,7 @@ Die Befehle können innerhalb des Blueprints angepasst werden. Dadurch können I
 
 ## Installation
 
-Nach dem Kauf erhältst du die Blueprint-Datei `dual_display_manager_v1.yaml` über den vorgesehenen Verkaufs- bzw. Installationsweg. Die kommerzielle Blueprint-Datei ist bewusst nicht Bestandteil dieses öffentlichen Repositorys.
+Nach dem Kauf erhältst du die Blueprint-Datei `dual_display_manager_v1.yaml` und gegebenenfalls die ergänzende Datei `cinema_source_start_v1.yaml` über den vorgesehenen Verkaufs- bzw. Installationsweg. Die kommerziellen Blueprint-Dateien sind bewusst nicht Bestandteil dieses öffentlichen Repositorys.
 
 Nach dem Import erscheint **Dual Display Manager - Denon / Marantz v1.0** in der Blueprint-Auswahl von Home Assistant. Anschließend müssen lediglich die eigenen Geräte ausgewählt werden; Änderungen am YAML-Code sind nicht erforderlich.
 
