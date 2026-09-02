@@ -6,6 +6,16 @@ Version numbering follows the format `Major.Minor`. Minor maintenance revisions 
 
 ---
 
+## [Unreleased]
+
+### Planned Addition
+
+- Documentation for the companion Blueprint **Cinema Source Start – Denon / Marantz**.
+- The companion Blueprint can start a compatible AVR and TV when a selected source device becomes active, while protecting an active projector.
+- The commercial YAML file remains separate from this public repository.
+
+---
+
 ## [1.0] – 2026-09-02
 
 ### Initial Release
