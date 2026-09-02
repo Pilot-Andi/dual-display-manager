@@ -32,23 +32,11 @@ Ein Heimkino verwendet beispielsweise:
 **Monitor 1:** Projektor  
 **Monitor 2:** Fernseher
 
-Wird der Projektor eingeschaltet, schaltet der AV-Receiver automatisch auf den Projektor-Ausgang und der Fernseher wird ausgeschaltet.
-
-Wird stattdessen der Fernseher eingeschaltet, prüft der Dual Display Manager zunächst, ob der Projektor gerade gestartet wurde. Dadurch wird verhindert, dass eine verspätete Statusmeldung des Fernsehers einen gerade gestarteten Projektor sofort wieder ausschaltet.
-
-Wird der Projektor ausgeschaltet, kann automatisch zurück auf den Fernseher gewechselt werden.
+Wird der Projektor eingeschaltet, schaltet der AV-Receiver automatisch auf den Projektor-Ausgang und der Fernseher wird ausgeschaltet. Wird stattdessen der Fernseher eingeschaltet, prüft der Dual Display Manager zunächst, ob der Projektor gerade gestartet wurde. Dadurch wird verhindert, dass eine verspätete Statusmeldung des Fernsehers einen gerade gestarteten Projektor sofort wieder ausschaltet. Wird der Projektor ausgeschaltet, kann automatisch zurück auf den Fernseher gewechselt werden.
 
 ## Zuspielerprüfung
 
-Die optionale Zuspielerprüfung ist standardmäßig aktiviert.
-
-Die Automation reagiert dadurch nur, wenn der AV-Receiver eingeschaltet und mindestens ein definierter Zuspieler aktiv ist.
-
-Beispiele: Apple TV 4K, MagentaTV, Nvidia Shield, Fire TV oder andere Home-Assistant-`media_player`-Entitäten.
-
-Diese zusätzliche Prüfung hilft, unnötige Umschaltungen durch unerwartete oder verspätete Gerätestatusmeldungen zu vermeiden.
-
-Die Zuspielerprüfung kann bei Bedarf deaktiviert werden.
+Die optionale Zuspielerprüfung ist standardmäßig aktiviert. Die Automation reagiert dadurch nur, wenn der AV-Receiver eingeschaltet und mindestens ein definierter Zuspieler aktiv ist. Beispiele: Apple TV 4K, MagentaTV, Nvidia Shield, Fire TV oder andere Home-Assistant-`media_player`-Entitäten. Diese zusätzliche Prüfung hilft, unnötige Umschaltungen durch unerwartete oder verspätete Gerätestatusmeldungen zu vermeiden. Die Zuspielerprüfung kann bei Bedarf deaktiviert werden.
 
 ## Projektor-Priorität
 
@@ -99,8 +87,6 @@ Der Zuspieler muss dabei von einem inaktiven in einen aktiven Zustand wechseln. 
 
 ## AVR-Ausgänge
 
-Standardmäßig verwendet der Blueprint:
-
 | Display | Befehl |
 | --- | --- |
 | Projektor | `/goform/formiPhoneAppDirect.xml?VSMONI1` |
@@ -111,6 +97,10 @@ Die Befehle können innerhalb des Blueprints angepasst werden. Dadurch können I
 ## Installation
 
 Nach dem Kauf erhältst du die Blueprint-Datei `dual_display_manager_v1.yaml` und gegebenenfalls die ergänzende Datei `cinema_source_start_v1.yaml` über den vorgesehenen Verkaufs- bzw. Installationsweg. Die kommerziellen Blueprint-Dateien sind bewusst nicht Bestandteil dieses öffentlichen Repositorys.
+
+## Kaufen
+
+Das vollständige Paket ist bei Payhip erhältlich: [Home Cinema Blueprint Bundle – Denon / Marantz v1.0](https://payhip.com/b/zM0bs)
 
 Nach dem Import erscheint **Dual Display Manager - Denon / Marantz v1.0** in der Blueprint-Auswahl von Home Assistant. Anschließend müssen lediglich die eigenen Geräte ausgewählt werden; Änderungen am YAML-Code sind nicht erforderlich.
 
